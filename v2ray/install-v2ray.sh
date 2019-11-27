@@ -8,7 +8,7 @@ config=/etc/v2ray/config.json
 
 ## Install V2ray
 yum install -y epel-release vim wget unzip
-wget https://raw.githubusercontent.com/gfw-breaker/gadgets/master/v2ary/v2ray-linux-64.zip
+wget https://raw.githubusercontent.com/gfw-breaker/gadgets/master/v2ray/v2ray-linux-64.zip
 unzip v2ray-linux-64.zip
 mkdir /usr/bin/v2ray
 cp v2ray /usr/bin/v2ray/v2ray
