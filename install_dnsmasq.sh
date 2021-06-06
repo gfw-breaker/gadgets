@@ -2,7 +2,6 @@
 
 yum install -y dnsmasq
 
-#sed -i '1i\nameserver 127.0.0.1' /etc/resolv.conf
 cat > /etc/resolv.conf <<EOF
 nameserver 127.0.0.1
 nameserver 8.8.8.8
@@ -13,6 +12,7 @@ cat > /etc/dnsmasq.conf <<EOF
 listen-address=127.0.0.1
 conf-dir=/etc/dnsmasq.d
 
+## example: block 360.cn and all subdomains
 address=/360.cn/127.0.0.1
 EOF
 
