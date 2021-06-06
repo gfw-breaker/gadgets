@@ -2,7 +2,12 @@
 
 yum install -y dnsmasq
 
-sed -i '1i\nameserver 127.0.0.1' /etc/resolv.conf
+#sed -i '1i\nameserver 127.0.0.1' /etc/resolv.conf
+cat > /etc/resolv.conf <<EOF
+nameserver 127.0.0.1
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+EOF
 
 cat > /etc/dnsmasq.conf <<EOF
 listen-address=127.0.0.1
